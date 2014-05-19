@@ -56,7 +56,7 @@ fu! racer#Complete(findstart, base)
 endf
 
 
-fu! racer#FindDefinition()
+fu! racer#JumpToDefinition()
 	let matches = s:racer('find-definition')[1]
 	if len(matches) > 0
 		let m = matches[0]
