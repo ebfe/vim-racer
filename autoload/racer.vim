@@ -35,6 +35,8 @@ fu! s:racer(what)
 				endif
 				if len(tok) > 4
 					let m['abbr'] = tok[4]
+				else
+					let m['abbr'] = tok[0]
 				endif
 				let matches = matches + [m]
 			endif
