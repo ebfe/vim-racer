@@ -34,9 +34,10 @@ fu! s:racer(what)
 					let m['file'] = tok[3]
 				endif
 				if len(tok) > 4
-					let m['abbr'] = tok[4]
-				else
-					let m['abbr'] = tok[0]
+					let m['kind'] = tok[4]
+				endif
+				if len(tok) > 5
+					let m['menu'] = tok[5]
 				endif
 				let matches = matches + [m]
 			endif
