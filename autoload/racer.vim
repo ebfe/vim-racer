@@ -63,6 +63,6 @@ fu! racer#JumpToDefinition()
 	let matches = s:racer('find-definition')[1]
 	if len(matches) > 0
 		let m = matches[0]
-		lexpr printf('%s:%s:%s %s', m['file'], m['line'], m['col'], m['abbr'])
+		lexpr printf('%s:%s:%s %s', m['file'], m['line'], m['col'], m['word'])
 	endif
 endf
