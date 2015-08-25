@@ -9,7 +9,7 @@ fu! s:racer(what)
 	let buf = getline(1, '$')
 	call writefile(buf, tmpfile, "b")
 
-	let cmd = printf('racer %s %d %d %s', a:what, line('.'), col('.')- 1,  tmpfile)
+	let cmd = printf('racer %s %d %d %s %s', a:what, line('.'), col('.')- 1,  fname, tmpfile)
 	let lines = split(system(cmd), "\n")
 
 	call delete(tmpfile)
